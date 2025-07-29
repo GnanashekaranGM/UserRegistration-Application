@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserRegitration.MainPage"
+             xmlns:views="clr-namespace:UserRegitration.Controls"
+             Title="User Registration">
+    <Grid>
+        <StackLayout Padding="30" Spacing="20" HorizontalOptions="Fill" VerticalOptions="Center">
+            
+            <Label Text="Register" FontSize="24" HorizontalOptions="Center" />
+
+            <Entry x:Name="Name"
+                   Placeholder="Full Name" />
+
+            <Entry x:Name="Email"
+                   Placeholder="Email"
+                   Keyboard="Email" />
+
+            <Entry x:Name="Password"
+                   Placeholder="Password"
+                   IsPassword="True" />
+
+            <Entry x:Name="ConfirmPassword"
+                   Placeholder="Confirm Password"
+                   IsPassword="True" />
+
+            <Button Text="Register"
+                    Clicked="OnRegisterClicked"
+                    BackgroundColor="#2196F3"
+                    TextColor="White" />
+
+            <Button Text="Sign In"
+                    Clicked="OnSignInClicked"/>
+        </StackLayout>
+
+        <views:LoadingOverlay x:Name="LoadingOverlay"/>
+    </Grid>
+        
+</ContentPage>
